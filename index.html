@@ -1,0 +1,1165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stevan Lohja - Developer Relations &amp; Protocol Operations</title>
+<meta name="description" content="Developer relations, protocol operations and solutions engineering. Founded a developer community of roughly 50,000, onboarded roughly 700 alpha developers, then ran a federated mainnet across 11 operator companies with zero liveness-loss events.">
+<meta name="author" content="Stevan Lohja">
+<link rel="canonical" href="https://stevanlohja.com/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Stevan Lohja - Developer Relations &amp; Protocol Operations">
+<meta property="og:description" content="Eight years in blockchain. I own the surface between a protocol and the people who depend on it - the developers who build on it and the operators who run it.">
+<meta property="og:url" content="https://stevanlohja.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://stevanlohja.com/assets/stevan-lohja.jpg">
+<meta property="og:image" content="https://stevanlohja.com/assets/stevan-lohja.jpg">
+<meta property="og:image:width" content="399">
+<meta property="og:image:height" content="399">
+<meta property="og:image:alt" content="Stevan Lohja">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230a0b0e'/><circle cx='16' cy='16' r='5' fill='%233fb950'/></svg>">
+
+<script>
+/* Set the theme before first paint: stored choice wins, else follow the OS. */
+(function(){try{var t=localStorage.getItem('sl-theme');
+if(!t)t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+document.documentElement.setAttribute('data-theme',t);}catch(e){
+document.documentElement.setAttribute('data-theme','dark');}})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="nav__brand" href="#top"><img class="nav__face" src="assets/stevan-lohja.jpg" alt="" width="24" height="24" decoding="async">stevan&nbsp;lohja</a>
+
+    <button class="iconbtn nav__burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+
+    <nav class="nav__links" id="navlinks" aria-label="Sections">
+      <a href="#about">What I do</a>
+      <a href="#devrel">Dev rel</a>
+      <a href="#partners">Partners</a>
+      <a href="#enablement">Operations</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav__tools">
+      <button class="iconbtn" id="theme" aria-label="Toggle colour theme">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+   <div class="hero__top">
+    <figure class="hero__portrait">
+      <img src="assets/stevan-lohja.jpg" alt="Stevan Lohja" width="399" height="399"
+           fetchpriority="high" decoding="async">
+    </figure>
+    <div class="hero__intro">
+    <p class="hero__kicker"><span class="pulse"></span>Garner, NC · open to remote or hybrid</p>
+
+    <h1>Stevan Lohja</h1>
+
+    <p class="hero__role">
+      <b>Developer &amp; Operator Relations</b>
+      <span class="sep">/</span>
+      <b>Protocol Operations</b>
+      <span class="sep">/</span>
+      <b>Node Infrastructure &amp; SRE</b>
+      <span class="sep">/</span>
+      <b>Solutions Engineering</b>
+    </p>
+
+    <p class="hero__lede">
+      I own the surface between a protocol and the people who depend on it - <strong>the developers who
+      build on it and the operators who run it</strong>. Founded the Midnight developer community, now
+      roughly 50,000 members, and onboarded roughly 700 alpha developers; grew its testnet validator set
+      to roughly 200; then took 13 institutional operators through mainnet go-live and kept them
+      producing. <strong>Eight years in blockchain</strong> across developer relations and protocol
+      operations, with hard-fork coordination and network-crisis command on two chains.
+    </p>
+
+    <div class="hero__meta">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 2 4 6v6c0 5 3.4 9.3 8 10 4.6-.7 8-5 8-10V6l-8-4z"/></svg>
+ Midnight Improvement Proposal (MIP) Editor
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M20 6 9 17l-5-5"/></svg>
+ Midnight Technical Authority
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 2 4 6v6c0 5 3.4 9.3 8 10 4.6-.7 8-5 8-10V6l-8-4z"/></svg>
+ Former ECIP Editor, Ethereum Classic
+      </span>
+    </div>
+
+    <div class="cta">
+      <a class="btn btn--primary" href="assets/Stevan-Lohja-Resume.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+ Résumé (PDF)
+      </a>
+      <a class="btn" href="https://linkedin.com/in/stevanlohja" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM2.4 21h5.16V9.2H2.4V21zm7.9 0h5.16v-6.4c0-1.7.32-3.35 2.43-3.35 2.08 0 2.11 1.95 2.11 3.46V21H25v-7.2c0-4.36-.94-7.05-5.03-7.05-1.96 0-3.28 1.08-3.82 2.1h-.07V9.2H10.3V21z"/></svg>
+ LinkedIn
+      </a>
+      <a class="btn" href="https://github.com/stevanlohja" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.55v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .96-.3 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.48 3.14-1.18 3.14-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12A11.5 11.5 0 0 0 12 .5z"/></svg>
+ GitHub
+      </a>
+      <button class="btn" id="copymail" data-mail="stevan.lohja.esquire546@passmail.net">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <span id="copymail-label">Copy email</span>
+      </button>
+    </div>
+    </div><!-- /.hero__intro -->
+   </div><!-- /.hero__top -->
+
+    <!-- metrics: row one is ecosystem growth, row two is the operating record -->
+    <ul class="metrics rv" aria-label="Record in numbers">
+      <li class="metric">
+        <div class="metric__v" data-count="8">8</div>
+        <div class="metric__l">Years in blockchain, two chains</div>
+      </li>
+      <li class="metric">
+        <div class="metric__v" data-count="50" data-suffix="K">50<span class="u">K</span></div>
+        <div class="metric__l">Developer community founded</div>
+      </li>
+      <li class="metric">
+        <div class="metric__v" data-count="700" data-prefix="~">~700</div>
+        <div class="metric__l">Developers onboarded to devnet</div>
+      </li>
+      <li class="metric">
+        <div class="metric__v" data-count="200" data-prefix="~">~200</div>
+        <div class="metric__l">Testnet validators grown</div>
+      </li>
+      <li class="metric">
+        <div class="metric__v" data-count="13">13</div>
+        <div class="metric__l">Mainnet validators operated</div>
+      </li>
+      <li class="metric">
+        <div class="metric__v" data-count="11">11</div>
+        <div class="metric__l">Operator companies coordinated</div>
+      </li>
+      <li class="metric">
+        <div class="metric__v" data-count="50" data-prefix="~">~50</div>
+        <div class="metric__l">Nodes across three environments</div>
+      </li>
+      <li class="metric metric--zero">
+        <div class="metric__v" data-count="0">0</div>
+        <div class="metric__l">Mainnet liveness-loss events</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ WHAT I DO ============ -->
+<section class="sec sec--alt" id="about">
+  <div class="wrap">
+    <header class="sec__head rv">
+      <span class="sec__num">01 / Positioning</span>
+      <h2>Four functions, one job</h2>
+      <p class="sec__sub">
+        My title changed three times without the work changing much. These are the four things I
+        actually do, and they compound rather than compete.
+      </p>
+    </header>
+
+    <div class="tri rv">
+      <article class="fn">
+        <span class="fn__n">01 / Where I started</span>
+        <h3>Developer relations</h3>
+        <p>
+          Founded the Midnight developer community and grew it into the network's front door.
+          Onboarded a private alpha cohort of roughly 700 developers, drove 100+ feedback issues into
+          product and engineering, built a GitHub-based bounty program, and restructured onboarding
+          around a Getting Started path built from real developer feedback. I began as the sole
+          developer-facing function at a protocol with no marketing team, and I still own the docs.
+        </p>
+        <p class="fn__k"><b>~50,000</b> community members &middot; <b>~700</b> developers onboarded &middot; <b>50+</b> bounties published</p>
+      </article>
+
+      <article class="fn">
+        <span class="fn__n">02 / Partner-facing</span>
+        <h3>Solutions engineering</h3>
+        <p>
+          Took 13 institutional node operators from a signed agreement to producing blocks on mainnet:
+          technical readiness assessment per operator, integration support, a phased guarded go-live,
+          then steady-state operation. The counterparties are payment networks, exchanges, custodians
+          and cloud providers, so the work is as much commercial and contractual as it is technical.
+        </p>
+        <p class="fn__k"><b>10</b> publicly announced partners &middot; <b>13</b> operators to go-live</p>
+      </article>
+
+      <article class="fn">
+        <span class="fn__n">03 / Where it went</span>
+        <h3>Protocol operations &amp; SRE</h3>
+        <p>
+          Run the fleet: 11 operator companies, roughly 50 nodes, 13 mainnet validators, three
+          environments. Incident command and the mainnet incident reviews, change management under a
+          gate I authored, the runbook and operator-guide library, and the monthly service-level review
+          that gates vendor payments. Two chains of hard-fork coordination behind it, including
+          recovering a network from a 51% attack inside 24 hours.
+        </p>
+        <p class="fn__k"><b>0</b> mainnet liveness-loss events &middot; <b>4</b> network-wide changes in 31 days</p>
+      </article>
+
+      <article class="fn">
+        <span class="fn__n">04 / Underneath all three</span>
+        <h3>Automation &amp; agentic AI</h3>
+        <p>
+          I build the tooling the work needs when it does not exist yet. An always-on alerting service
+          with deterministic detection and a self-hosted model behind output guardrails; validator
+          infrastructure modules in OpenTofu; and ten operational workstreams run as supervised AI
+          workflows where nothing publishes, sends or posts without a human approving it.
+        </p>
+        <p class="fn__k"><b>~$56/month</b> to replace an always-on human detection tier</p>
+      </article>
+    </div>
+
+    <div class="note rv" style="margin-top:18px;margin-bottom:0">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M5 12h14m0 0-5-5m5 5-5 5"/></svg>
+      <p>
+        <strong>One continuous job, not a career change.</strong> The validator ecosystem I grew to
+        roughly 200 operators in a developer-relations role is the same ecosystem I later ran as a
+        federated mainnet operator set. The throughline is constant: own the surface between a protocol
+        and the people who depend on it, write down how it works, and automate the parts that should
+        not need a human.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVELOPER RELATIONS ============ -->
+<section class="sec" id="devrel">
+  <div class="wrap">
+    <header class="sec__head rv">
+      <span class="sec__num">02 / Ecosystem</span>
+      <h2>Developer relations</h2>
+      <p class="sec__sub">
+        Where I started and what I still do. Community, developer onboarding, documentation, advocacy
+        and the standards process - the work that decides whether anyone builds on a protocol at all.
+      </p>
+    </header>
+
+    <div class="jgrid">
+
+      <article class="jcard rv">
+        <div class="jcard__head">
+          <h3>Midnight developer community</h3>
+          <span class="jcard__state jcard__state--metric">~50,000 members</span>
+        </div>
+        <p>
+          Founded it and grew it into the network's front door - the place developers, ambassadors and
+          node operators actually go first.
+        </p>
+        <ul class="jcard__facts">
+          <li>Founded the Discord community that now has roughly <strong>50,000 members</strong>, and built the support and moderation structure underneath it.</li>
+          <li>Run the <strong>validator community calls</strong>, the recurring forum where operators raise problems while they are still questions rather than incidents.</li>
+          <li>Advised the <strong>ambassador cohort</strong> on building on the network, so advocacy came with working code rather than only enthusiasm.</li>
+        </ul>
+        <ul class="stack"><li>Community strategy</li><li>Discord</li><li>Advocacy</li><li>Operator relations</li></ul>
+      </article>
+
+      <article class="jcard rv">
+        <div class="jcard__head">
+          <h3>Contributor Hub</h3>
+          <span class="jcard__state jcard__state--metric">50+ bounties</span>
+        </div>
+        <p>
+          A GitHub-based community bounty program I created, so community interest turns into merged
+          work instead of staying interest.
+        </p>
+        <ul class="jcard__facts">
+          <li>More than <strong>50 bounties published</strong> across documentation, tooling and integrations.</li>
+          <li>Public repository, so the contribution history is visible and reviewable by anyone - including a hiring manager.</li>
+        </ul>
+        <ul class="stack"><li>GitHub</li><li>Program design</li><li>Incentive design</li></ul>
+        <div class="jcard__links">
+          <a class="tinybtn" href="https://github.com/midnightntwrk/contributor-hub" rel="noopener">Repository &#8599;</a>
+        </div>
+      </article>
+
+      <article class="jcard rv">
+        <div class="jcard__head">
+          <h3>Developer onboarding</h3>
+          <span class="jcard__state jcard__state--metric">~700 developers</span>
+        </div>
+        <p>
+          Owned the path a developer takes from first contact to a working application, from closed
+          alpha through the public milestones.
+        </p>
+        <ul class="jcard__facts">
+          <li>Onboarded a private alpha cohort of roughly <strong>700 developers</strong> onto Devnet-0, managing their API access <strong>programmatically</strong> rather than by hand.</li>
+          <li>Drove <strong>100+ feedback issues</strong> into product and engineering; many shipped as feature enhancements.</li>
+          <li>Restructured onboarding around a new <strong>Getting Started path</strong> built from real developer feedback rather than internal assumptions about what was confusing.</li>
+        </ul>
+        <ul class="stack"><li>Developer onboarding</li><li>API programs</li><li>Feedback loops</li><li>DX research</li></ul>
+      </article>
+
+      <article class="jcard rv">
+        <div class="jcard__head">
+          <h3>Documentation</h3>
+          <span class="jcard__state jcard__state--metric">Alpha to mainnet</span>
+        </div>
+        <p>
+          I started my career as the only developer-facing function at a protocol with no marketing
+          team - docs, demos, articles and community, alone. I never stopped owning documentation.
+        </p>
+        <ul class="jcard__facts">
+          <li>Delivered documentation from <strong>closed alpha through the public devnet and testnet</strong> milestones.</li>
+          <li>Own the operator-facing library: runbooks, operator guides and the compatibility matrix the fleet versions against - <strong>code owner</strong> for the guides and the matrix.</li>
+          <li>Write the change and incident records operators navigate by during a coordinated upgrade, which is documentation with a deadline attached.</li>
+        </ul>
+        <ul class="stack"><li>Technical writing</li><li>Docs-as-code</li><li>Runbooks</li><li>Markdown</li></ul>
+      </article>
+
+      <article class="jcard rv">
+        <div class="jcard__head">
+          <h3>Conferences, hackathons &amp; advocacy</h3>
+          <span class="jcard__state jcard__state--metric">15+ conferences</span>
+        </div>
+        <p>
+          Representing a protocol in public, and converting attention into contribution rather than
+          into a follower count.
+        </p>
+        <ul class="jcard__facts">
+          <li>Represented Midnight at <strong>15+ industry conferences</strong> including Consensus and Blockchain Rio, with event activations designed to turn attendees into active contributors.</li>
+          <li><strong>Judged and mentored hackathons</strong> in Argentina.</li>
+          <li>Ran the Ethereum Classic hackathon program owning judging and budget, <strong>mentored 12 accelerator startups</strong>, and spoke across the US, Canada and Asia.</li>
+        </ul>
+        <ul class="stack"><li>Public speaking</li><li>Hackathons</li><li>Event strategy</li><li>Mentoring</li></ul>
+      </article>
+
+      <article class="jcard rv">
+        <div class="jcard__head">
+          <h3>Ecosystem comms &amp; standards</h3>
+          <span class="jcard__state jcard__state--metric">~51% open rate</span>
+        </div>
+        <p>
+          Getting a network change in front of every party who has to act on it, and running the
+          standards process that decides what changes in the first place.
+        </p>
+        <ul class="jcard__facts">
+          <li><strong>Midnight Improvement Proposal (MIP) Editor</strong> and a member of the Technical Authority; formerly <strong>ECIP Editor</strong> for Ethereum Classic and hard-fork coordinator across <strong>200+ ecosystem stakeholders</strong>.</li>
+          <li>Launched <strong>ETC Signal</strong>, the ecosystem newsletter carrying network changes to 200+ exchange, wallet, validator and security-operations stakeholders at a <strong>~51% open rate</strong>.</li>
+          <li><strong>100+ operator communications</strong> at Midnight, plus the operator onboarding material every new counterparty starts from.</li>
+        </ul>
+        <ul class="stack"><li>Standards process</li><li>Ecosystem comms</li><li>Newsletters</li><li>Governance</li></ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="sec sec--alt" id="partners">
+  <div class="wrap">
+    <header class="sec__head rv">
+      <span class="sec__num">03 / Solutions engineering</span>
+      <h2>Partners I enabled</h2>
+      <p class="sec__sub">
+ Institutional operators, infrastructure providers and platforms I onboarded, coordinated and
+ supported through Midnight's federated mainnet launch and after - from technical validation and
+ integration through go-live and steady-state operation.
+      </p>
+    </header>
+
+    <div class="note rv">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="9"/><path d="M12 16v-5m0-3.5v.01"/></svg>
+      <p>
+        <strong>On naming.</strong> Every organisation below is named only because Midnight publicly
+ announced the relationship itself. Each card links to that official announcement, and each is
+ described in the announcement's own words. No operator-identifying performance data, contract
+ terms, availability figures or incident detail appears anywhere on this site.
+      </p>
+    </div>
+
+    <div class="filters rv" id="pfilters" role="group" aria-label="Filter partners by type">
+      <button class="chip" data-pf="all" aria-pressed="true">All<span class="n">10</span></button>
+      <button class="chip" data-pf="fno" aria-pressed="false">Federated node operators<span class="n">6</span></button>
+      <button class="chip" data-pf="infra" aria-pressed="false">Infrastructure &amp; strategic<span class="n">3</span></button>
+      <button class="chip" data-pf="exch" aria-pressed="false">Exchange &amp; listing<span class="n">1</span></button>
+    </div>
+
+    <div class="pgrid" id="pgrid">
+
+      <!-- Worldpay -->
+      <article class="pcard rv" data-cat="fno">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">WP</div>
+          <div class="pcard__id">
+            <h3>Worldpay</h3>
+            <p class="pcard__sub">Merchant services · 6M+ merchants</p>
+          </div>
+          <span class="tag tag--fno">FNO</span>
+        </div>
+ <p class="pcard__quote">
+          “The network of federated node operators continues to grow… Now part of one of the world's
+          largest merchant services providers, serving 6M+ merchants and processing $3.7T in payments
+          annually across 175+ [countries].”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">18 Mar 2026</span>
+          <button class="tinybtn" data-tweet="2034280535531409460">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/midnightfdn/status/2034280535531409460" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="2034280535531409460"></div>
+      </article>
+
+      <!-- Bullish -->
+      <article class="pcard rv" data-cat="fno">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">BU</div>
+          <div class="pcard__id">
+            <h3>Bullish</h3>
+            <p class="pcard__sub">Institutional digital-asset platform</p>
+          </div>
+          <span class="tag tag--fno">FNO</span>
+        </div>
+ <p class="pcard__quote">
+          “Bullish, an institutionally focused digital asset platform, joins as a federated node
+          operator — helping explore how exchanges can cryptographically prove…”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">17 Mar 2026</span>
+          <button class="tinybtn" data-tweet="2033994197326565641">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/midnightfdn/status/2033994197326565641" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="2033994197326565641"></div>
+      </article>
+
+      <!-- Pairpoint -->
+      <article class="pcard rv" data-cat="fno">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">PP</div>
+          <div class="pcard__id">
+            <h3>Pairpoint</h3>
+            <p class="pcard__sub">by Vodafone Group</p>
+          </div>
+          <span class="tag tag--fno">FNO</span>
+        </div>
+ <p class="pcard__quote">
+          “Pairpoint joins as an initial federated node operator and is exploring how Midnight's
+          zero-knowledge architecture can support…”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">25 Feb 2026</span>
+          <button class="tinybtn" data-tweet="2026669513014452356">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/midnightfdn/status/2026669513014452356" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="2026669513014452356"></div>
+      </article>
+
+      <!-- MoneyGram -->
+      <article class="pcard rv" data-cat="fno">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">MG</div>
+          <div class="pcard__id">
+            <h3>MoneyGram</h3>
+            <p class="pcard__sub">Global payments · 200+ countries</p>
+          </div>
+          <span class="tag tag--fno">FNO</span>
+        </div>
+ <p class="pcard__quote">
+          “Operating in 200+ countries and territories, MoneyGram joins as an initial federated node
+          operator — helping explore how global payment networks can move…”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">24 Feb 2026</span>
+          <button class="tinybtn" data-tweet="2026323874753683744">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/midnightfdn/status/2026323874753683744" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="2026323874753683744"></div>
+      </article>
+
+      <!-- Shielded -->
+      <article class="pcard rv" data-cat="fno">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">SH</div>
+          <div class="pcard__id">
+            <h3>Shielded Technologies</h3>
+            <p class="pcard__sub">Cryptography · from IOG lineage</p>
+          </div>
+          <span class="tag tag--fno">FNO</span>
+        </div>
+ <p class="pcard__quote">
+          “Shielded joins Midnight as a Federated Node Operator, which brings the network to four as we
+          work toward ten strategic launch partners securing core infrastructure ahead of mainnet in
+          March.”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">20 Feb 2026</span>
+          <button class="tinybtn" data-tweet="2024895085138063684">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/midnightfdn/status/2024895085138063684" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="2024895085138063684"></div>
+      </article>
+
+      <!-- AlphaTON -->
+      <article class="pcard rv" data-cat="fno">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">AT</div>
+          <div class="pcard__id">
+            <h3>AlphaTON Capital</h3>
+            <p class="pcard__sub">Telegram-scale infrastructure</p>
+          </div>
+          <span class="tag tag--fno">FNO</span>
+        </div>
+ <p class="pcard__quote">
+          “AlphaTON Capital specializes in scaling infrastructure for Telegram and its billion users. As
+          a Midnight federated node operator, AlphaTON…”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">18 Feb 2026</span>
+          <button class="tinybtn" data-tweet="2024100094274920850">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/midnightfdn/status/2024100094274920850" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="2024100094274920850"></div>
+      </article>
+
+      <!-- Blockdaemon -->
+      <article class="pcard rv" data-cat="infra">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">BD</div>
+          <div class="pcard__id">
+            <h3>Blockdaemon</h3>
+            <p class="pcard__sub">Institutional-grade node infrastructure</p>
+          </div>
+          <span class="tag tag--infra">Strategic</span>
+        </div>
+ <p class="pcard__quote">
+          “Midnight is excited to announce a strategic partnership with Blockdaemon, a leading provider
+          of institutional-grade blockchain infrastructure. This collaboration will help simplify the
+          deployment of privacy-preserving applications on Midnight…”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">13 Nov 2025</span>
+          <button class="tinybtn" data-tweet="1988991529080258692">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/MidnightNtwrk/status/1988991529080258692" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="1988991529080258692"></div>
+      </article>
+
+      <!-- Google Cloud -->
+      <article class="pcard rv" data-cat="infra">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">GC</div>
+          <div class="pcard__id">
+            <h3>Google Cloud</h3>
+            <p class="pcard__sub">Cloud &amp; zero-knowledge infrastructure</p>
+          </div>
+          <span class="tag tag--infra">Strategic</span>
+        </div>
+ <p class="pcard__quote">
+          “The Midnight Foundation is collaborating with Google Cloud to accelerate privacy-first
+          infrastructure and advance zero-knowledge technology as essential infrastructure for the next
+          generation of digital systems.”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">30 Sep 2025</span>
+          <button class="tinybtn" data-tweet="1973021795532878012">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/MidnightNtwrk/status/1973021795532878012" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="1973021795532878012"></div>
+      </article>
+
+      <!-- Cherry Servers -->
+      <article class="pcard rv" data-cat="infra">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">CS</div>
+          <div class="pcard__id">
+            <h3>Cherry Servers</h3>
+            <p class="pcard__sub">Bare-metal for block production</p>
+          </div>
+          <span class="tag tag--infra">Infrastructure</span>
+        </div>
+ <p class="pcard__quote">
+          “This exciting collaboration with Cherry Servers will provide high-performance, secure, &amp;
+          scalable infrastructure for Midnight block production… &amp; what it means for Cardano Stake
+          Pool Operators.”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">6 Feb 2025</span>
+          <button class="tinybtn" data-tweet="1887514999213404575">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/MidnightNtwrk/status/1887514999213404575" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="1887514999213404575"></div>
+      </article>
+
+      <!-- eToro -->
+      <article class="pcard rv" data-cat="exch">
+        <div class="pcard__top">
+          <div class="pcard__mark" aria-hidden="true">ET</div>
+          <div class="pcard__id">
+            <h3>eToro</h3>
+            <p class="pcard__sub">Multi-asset investment platform</p>
+          </div>
+          <span class="tag tag--exch">Exchange</span>
+        </div>
+ <p class="pcard__quote">
+          “eToro joins a long list of exchanges now supporting NIGHT. By supporting NIGHT, eToro helps
+          broaden participation in the Midnight ecosystem, giving more users the ability to access and
+          experience our privacy-first infrastructure.”
+        </p>
+        <div class="pcard__foot">
+          <span class="pcard__date">20 Jan 2026</span>
+          <button class="tinybtn" data-tweet="2013593219825562001">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6 22H3l7.2-8.3L2 2h6.4l4.6 6.1L18.9 2zm-1.1 18h1.7L7.4 3.8H5.6L17.8 20z"/></svg>
+ Show post
+          </button>
+          <a class="tinybtn tinybtn--icon" href="https://x.com/MidnightNtwrk/status/2013593219825562001" rel="noopener" aria-label="Read the announcement on x.com" title="Read the announcement on x.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+        <div class="pcard__embed" data-embed-for="2013593219825562001"></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENABLEMENT ============ -->
+<section class="sec" id="enablement">
+  <div class="wrap">
+    <header class="sec__head rv">
+      <span class="sec__num">04 / Operations</span>
+      <h2>Operator enablement</h2>
+      <p class="sec__sub">
+        The operations half of the job. Enablement here is not a slide deck - it is the surface an
+        operator actually touches, and the obligation to keep them producing blocks once they are on
+        it.
+      </p>
+    </header>
+
+    <ul class="enable rv">
+      <li>
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m0 0-5-5m5 5-5 5"/></svg>
+ Agreement to go-live
+        </h3>
+        <p>Took 13 federated node operators through mainnet go-live in March 2026 under a phased guarded
+ launch - including a last-minute WireGuard overlay for DDoS protection. Assessed technical
+ readiness per operator and onboarded launch ecosystem infrastructure: backup wallet providers,
+ faucet, explorers.</p>
+      </li>
+      <li>
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>
+ Coordinated change execution
+        </h3>
+        <p>Four network-wide changes in 31 days - a Cardano hard fork, a node binary rollout against a
+ hard deadline, a runtime upgrade through governance, and an out-of-band patch. Every operator
+ cleared every change, with no loss of block production or finality. Changes prove on two
+ pre-production environments before mainnet promotion, under a change-oversight gate I authored.</p>
+      </li>
+      <li>
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h11l5 5v11H4z"/><path d="M8 12h8M8 16h5"/></svg>
+ The operator-facing surface
+        </h3>
+        <p>Own the runbook library, the operator guides and the compatibility matrix the fleet versions
+ against - code owner for the guides and the matrix. 100+ operator communications, the validator
+ community calls, and operator onboarding.</p>
+      </li>
+      <li>
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3 3 20h18L12 3z"/><path d="M12 10v4m0 3v.01"/></svg>
+ Incident command
+        </h3>
+        <p>Author the mainnet incident reviews, with time-to-acknowledge under five minutes. Traced one
+ validator outage to two upstream commits that added and then renamed a database index the same
+ day, shipping a metadata-only rename instead of a multi-hour rebuild. Designed and staffed the
+ off-hours tier that cut detection of a P1 mainnet incident to six minutes.</p>
+      </li>
+      <li>
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+ Commercial and contractual
+        </h3>
+        <p>Run the monthly service-level agreement review that gates vendor payments - a commercial call
+ with money attached - and served as the operations input into Legal's redraft of the node
+ operator agreement.</p>
+      </li>
+      <li>
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 4 6v6c0 5 3.4 9.3 8 10 4.6-.7 8-5 8-10V6l-8-4z"/></svg>
+ Governance and standards
+        </h3>
+        <p>Midnight Improvement Proposal (MIP) Editor and a member of the Midnight Technical Authority - 
+ so partner and operator signal lands in the standards process rather than in a backlog. Earlier,
+ ECIP Editor for Ethereum Classic and hard-fork coordinator across 200+ ecosystem stakeholders.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="sec sec--alt" id="projects">
+  <div class="wrap">
+    <header class="sec__head rv">
+      <span class="sec__num">05 / Build</span>
+      <h2>Projects</h2>
+      <p class="sec__sub">
+        What I build when the work needs a tool that does not exist yet - alerting services,
+        infrastructure modules, feasibility studies and documentation systems. A recurring architecture
+        runs through the engineering: <strong>deterministic narrowing, judgment on the shortlist</strong>
+        - code does the reducing, a human or a guardrailed model handles what is left, and nothing
+        reaches production without a review gate.
+      </p>
+    </header>
+
+    <div class="filters rv" id="jfilters" role="group" aria-label="Filter projects by discipline">
+      <button class="chip" data-jf="all" aria-pressed="true">All<span class="n">9</span></button>
+      <button class="chip" data-jf="agentic" aria-pressed="false">Agentic AI<span class="n">3</span></button>
+      <button class="chip" data-jf="iac" aria-pressed="false">Infrastructure as code<span class="n">4</span></button>
+      <button class="chip" data-jf="sre" aria-pressed="false">Reliability &amp; SRE<span class="n">5</span></button>
+      <button class="chip" data-jf="devrel" aria-pressed="false">Ecosystem &amp; docs<span class="n">2</span></button>
+    </div>
+
+    <div class="jgrid" id="jgrid">
+
+      <!-- alerting agent -->
+      <article class="jcard jcard--wide rv" data-tags="agentic sre iac">
+        <div class="jcard__head">
+          <h3>Agentic validator alerting service</h3>
+          <span class="jcard__state jcard__state--live">Running · preprod</span>
+        </div>
+        <p>
+ An always-on, self-hosted service that watches a Substrate telemetry feed, detects validator
+ anomalies, and posts factual alerts to Discord. It replaces a browser-tab-bound webhook that
+ only fired while someone had a dashboard open, and automates the always-on detection step of a
+ human-staffed off-hours support tier.
+        </p>
+        <ul class="jcard__facts">
+          <li><strong>A model never decides whether to page.</strong> Detection is deterministic - thresholds ported from a tested dashboard fork, with edge-triggered deduplication. A self-hosted open model composes only the human-readable summary line, behind output guardrails, and was adversarially tested.</li>
+          <li><strong>~4,300 lines of TypeScript</strong> across 22 source and 7 test modules, 85 tests, Dockerised, with a status page, live reasoning view and daily digest.</li>
+          <li>Emits <strong>action tiers</strong> (PAGE NOW / NOTIFY / LOG) rather than P-levels, so the alert says what to do rather than how bad someone thinks it is.</li>
+          <li>Runs at roughly <strong>$56/month</strong> in self-hosted infrastructure with no per-token API cost. Four deployment defects were found and fixed in local VM validation before any cloud spend.</li>
+          <li>Ships as an infrastructure-as-code leaf with a digest-pinned image. Webhook URL and the per-validator contact roster never enter the repository - only a template with empty arrays.</li>
+        </ul>
+        <ul class="stack">
+          <li>TypeScript</li><li>Node.js</li><li>Docker</li><li>Ollama</li><li>OpenTofu</li><li>GCP</li><li>Substrate telemetry</li><li>Multipass</li>
+        </ul>
+        <div class="jcard__links">
+          <a class="tinybtn" href="https://github.com/stevanlohja/mn-ops-dashboard" rel="noopener">Detection logic originated in this dashboard ↗</a>
+        </div>
+      </article>
+
+      <!-- wireguard module -->
+      <article class="jcard rv" data-tags="iac sre">
+        <div class="jcard__head">
+          <h3>Validator node module with WireGuard overlay</h3>
+          <span class="jcard__state">Local-tested</span>
+        </div>
+        <p>
+ An OpenTofu/Terraform module for a GCP validator that adds what the existing shared module
+ lacks entirely: a trusted WireGuard overlay configured on the host, not just a firewall rule.
+        </p>
+        <ul class="jcard__facts">
+          <li><strong>The private key never enters instance metadata.</strong> cloud-init ships a config template without it; a boot script fetches the key from Secret Manager at first start.</li>
+          <li>Re-runs use <code class="mono">wg syncconf</code>, not <code class="mono">wg-quick down/up</code> - so a config change cannot partition a live validator mid-apply.</li>
+          <li><strong>No autoscaler, deliberately.</strong> Scaling out a keyed validator produces a duplicate block producer. Metrics firewall is closed to health-check probe ranges instead of the internet.</li>
+          <li>Placed as a CI-visible subdirectory consumed by nothing, so iteration produced five no-op plans and zero risk to mainnet. Gated on a two-VM Multipass mesh test before any cloud work.</li>
+        </ul>
+        <ul class="stack">
+          <li>OpenTofu</li><li>GCP</li><li>WireGuard</li><li>cloud-init</li><li>systemd</li><li>Secret Manager</li><li>Bash</li>
+        </ul>
+      </article>
+
+      <!-- snapshot service -->
+      <article class="jcard rv" data-tags="sre iac">
+        <div class="jcard__head">
+          <h3>Signed chain-snapshot distribution</h3>
+          <span class="jcard__state">Design of record</span>
+        </div>
+        <p>
+ A design for weekly, cryptographically signed, publicly verifiable chain snapshots. It exists
+ because syncing a node from genesis was measured at ~0.2 blocks/sec against a chain advancing
+ at 10 blocks/min - an unaided bootstrap that effectively never converges.
+        </p>
+        <ul class="jcard__facts">
+          <li><strong>Allowlist, never exclude-list, when packaging.</strong> The node's base path also holds its keystore and network secret. An allowlist fails closed; an exclude-list fails open and publishes a node key.</li>
+          <li><strong>Both database trees or nothing.</strong> The chain store and the ledger store are siblings and must be captured at one instant; a partial artifact is silently broken.</li>
+          <li><strong>A signature proves publication, not correctness.</strong> The signature proves who published the bytes; a published chain attestation - height, block hash, state root, cross-checkable against the live chain - is what makes forged state detectable even under key compromise.</li>
+          <li>Publish order is upload, sign, verify from a clean host, human approval, then flip <code class="mono">latest</code>. Never the reverse.</li>
+        </ul>
+        <ul class="stack">
+          <li>cosign</li><li>Cloud KMS / HSM</li><li>GCS + CDN</li><li>ParityDB</li><li>Threat modelling</li>
+        </ul>
+      </article>
+
+      <!-- dolos -->
+      <article class="jcard rv" data-tags="sre">
+        <div class="jcard__head">
+          <h3>Feasibility spike: replacing a heavyweight data dependency</h3>
+          <span class="jcard__state">Verdict delivered</span>
+        </div>
+        <p>
+ Node operators are told to provision 500 GB NVMe and 32 GB RAM, and the guide names Cardano
+ sync as the long pole. That pole is <code class="mono">cardano-db-sync</code> plus PostgreSQL.
+ Could a lighter Cardano data node (<a href="https://github.com/txpipe/dolos" rel="noopener">Dolos</a>,
+ documented under 2 GB RAM) take its place?
+        </p>
+        <ul class="jcard__facts">
+          <li><strong>Answer: not by configuration today - and here is precisely the seam.</strong> Ruled out three integration paths by reading source, with citations, before launching a single VM.</li>
+          <li>The node reads db-sync over <strong>raw SQL</strong>, so there is no RPC layer to intercept; and the candidate has <strong>no PostgreSQL surface at all</strong>, which rules out a wire-protocol shim.</li>
+          <li>Upstream already ships a data source for it - but unreleased and stalled, absent from the latest tag, with a divergence found in a consensus-critical query. The vendored fork predates all of it and returns "not implemented yet". That match arm is the seam.</li>
+          <li><strong>Stated the honest ceiling on my own result:</strong> a second db-sync-bound component sits outside the upstream toolkit, so a green result must not be reported as "the dependency can be dropped".</li>
+        </ul>
+        <ul class="stack">
+          <li>Rust (source analysis)</li><li>PostgreSQL</li><li>Docker Compose</li><li>Multipass</li><li>Ouroboros / CBOR</li>
+        </ul>
+      </article>
+
+      <!-- platform plan -->
+      <article class="jcard rv" data-tags="iac sre">
+        <div class="jcard__head">
+          <h3>Infrastructure platform plan</h3>
+          <span class="jcard__state">Plan of record</span>
+        </div>
+        <p>
+ The platform-level plan for a multi-environment validator estate on GCP and how it is deployed
+ and governed through infrastructure as code - project topology, secret model, boot nodes,
+ snapshots, data-source topology, ephemeral environments and agentic operations, as ten
+ workstreams with stable identifiers.
+        </p>
+        <ul class="jcard__facts">
+          <li><strong>Killed a proposed design by verifying it.</strong> The node has zero KMS integration - keys are plaintext files - so a KMS-as-signer model was unreachable. Redirected KMS to artifact signing, where the signer is KMS-aware, and met the actual goal (security owns keys, operators cannot read them) with a separate project using Secret Manager and customer-managed encryption keys.</li>
+          <li><strong>Merging is deploying,</strong> and a change to the shared module fans out to every environment including mainnet - so node changes stay leaf-only. Documented as a blast-radius rule.</li>
+          <li><strong>Agent-readiness starts with a docs-truth pass.</strong> Roughly a dozen claims in the repository's own documentation contradicted its code. A human skims past that; an agent asserts it.</li>
+          <li>Authority ceiling for any agent in the plan: <strong>propose a change, never merge.</strong> Automated remediation is explicitly out of scope.</li>
+        </ul>
+        <ul class="stack">
+          <li>OpenTofu</li><li>GCP</li><li>Secret Manager</li><li>Cloud KMS / CMEK</li><li>Architecture review</li>
+        </ul>
+      </article>
+
+      <!-- ops portfolio -->
+      <article class="jcard rv" data-tags="agentic">
+        <div class="jcard__head">
+          <h3>Operations portfolio as supervised AI workflows</h3>
+          <span class="jcard__state jcard__state--live">In daily use</span>
+        </div>
+        <p>
+ Ten operational workstreams - operator communications, leadership reporting, SLA review,
+ off-hours incident handover, roadmap, platform planning and more - run as AI-assisted workflows
+ rather than ad-hoc prompting.
+        </p>
+        <ul class="jcard__facts">
+          <li>Each workstream has a <strong>written protocol, a confidentiality tier and an approval gate</strong>. Nothing publishes, sends or posts without explicit human approval.</li>
+          <li>Facts are verified against read-only clones of the source-of-truth repositories rather than paraphrased from memory - the rule that catches stale versions and invented flags.</li>
+          <li>Includes a monthly classification of my own function on an agentic-versus-AI-resistant grid, to decide what to automate and where human effort is genuinely irreplaceable.</li>
+        </ul>
+        <ul class="stack">
+          <li>Claude Code</li><li>Agentic workflow design</li><li>Ollama</li><li>Human-review gates</li><li>Markdown protocols</li>
+        </ul>
+      </article>
+
+      <!-- ATS pipeline -->
+      <article class="jcard rv" data-tags="agentic">
+        <div class="jcard__head">
+          <h3>Zero-cost job-market pipeline</h3>
+          <span class="jcard__state">Running weekly</span>
+        </div>
+        <p>
+ Rather than searching aggregators, enumerate the employers worth working for and poll their
+ applicant-tracking systems directly. Python standard library only - no dependencies, no API
+ keys, no paid calls anywhere in the loop.
+        </p>
+        <ul class="jcard__facts">
+          <li>Normalises three different ATS payload shapes into one schema, tracks seen postings, then scores against a weighted profile behind a hard location gate. <strong>~1,100 postings down to ~15.</strong></li>
+          <li><strong>Two scoring defects found and fixed on the first run,</strong> both instructive: description-based domain scoring inflates every posting at a crypto company, so domain words now score at full weight in the title and one third in the body; and a loose location term matched the prose "allows us to", passing a posting from the wrong continent.</li>
+          <li>Tuned to over-include rather than miss, with the threshold exposed as configuration and the limitations written down rather than glossed.</li>
+        </ul>
+        <ul class="stack">
+          <li>Python 3 (stdlib)</li><li>Greenhouse / Lever / Ashby APIs</li><li>JSON</li><li>Deterministic scoring</li>
+        </ul>
+      </article>
+
+      <!-- contributor hub -->
+      <article class="jcard rv" data-tags="devrel">
+        <div class="jcard__head">
+          <h3>Midnight Contributor Hub</h3>
+          <span class="jcard__state jcard__state--live">Public</span>
+        </div>
+        <p>
+ A GitHub-based community bounty program I created, turning a Discord community into people who
+ ship. More than 50 bounties published.
+        </p>
+        <ul class="jcard__facts">
+          <li>Founded the Midnight Discord community, now roughly <strong>50,000 members</strong>, and advised the ambassador cohort on building on the network.</li>
+          <li>Represented Midnight at <strong>15+ conferences</strong> including Consensus and Blockchain Rio; judged and mentored hackathons in Argentina, with activations designed to convert attendees into active contributors.</li>
+        </ul>
+        <ul class="stack">
+          <li>GitHub</li><li>Community programs</li><li>Developer advocacy</li>
+        </ul>
+        <div class="jcard__links">
+          <a class="tinybtn" href="https://github.com/midnightntwrk/contributor-hub" rel="noopener">Repository ↗</a>
+        </div>
+      </article>
+
+      <!-- docs -->
+      <article class="jcard rv" data-tags="devrel">
+        <div class="jcard__head">
+          <h3>Developer and operator documentation</h3>
+          <span class="jcard__state jcard__state--live">Maintained</span>
+        </div>
+        <p>
+ I started my career as a technical writer and never stopped owning the docs. Restructured
+ developer onboarding around a new Getting Started path built from real developer feedback.
+        </p>
+        <ul class="jcard__facts">
+          <li>Onboarded a private alpha cohort of roughly <strong>700 developers</strong>, managing API access programmatically and driving <strong>100+ feedback issues</strong> into product and engineering - many of which shipped as features.</li>
+          <li>Owned documentation delivery from closed alpha through public devnet and testnet milestones.</li>
+          <li>Launched <strong>ETC Signal</strong>, an ecosystem newsletter carrying network changes to 200+ exchange, wallet, validator and security-operations stakeholders at a ~51% open rate.</li>
+        </ul>
+        <ul class="stack">
+          <li>Technical writing</li><li>Docs-as-code</li><li>Developer onboarding</li><li>API programs</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="sec" id="experience">
+  <div class="wrap">
+    <header class="sec__head rv">
+      <span class="sec__num">06 / Track record</span>
+      <h2>Experience</h2>
+    </header>
+
+    <ol class="tl">
+      <li class="is-current rv">
+        <div class="job__org">
+          <h3>Midnight Foundation</h3>
+          <span class="job__when">Jul 2025 - Oct 2026 · Remote</span>
+        </div>
+        <p class="job__title">Senior Developer Relations Engineer → Protocol Operations</p>
+        <p class="job__scope">Hired into developer relations; scope moved to protocol operations through mainnet launch and after.</p>
+        <ul class="job__pts">
+          <li>Took <strong>13 federated node operators</strong> through mainnet go-live in March 2026 under a phased guarded launch, including a last-minute WireGuard overlay for DDoS protection. Build and operate the Foundation's own mainnet validator, with zero unplanned downtime since launch.</li>
+          <li>Run protocol operations across <strong>11 operator companies, roughly 50 nodes, 13 mainnet validators and three environments</strong>, with zero mainnet liveness-loss events.</li>
+          <li>Executed <strong>four network-wide changes in 31 days</strong> - a Cardano hard fork, a node binary rollout against a hard deadline, a runtime upgrade through governance, and an out-of-band patch - with every operator clearing every change and no loss of block production or finality.</li>
+          <li>Author the mainnet incident reviews, with time-to-acknowledge under five minutes. Designed and staffed the off-hours support tier that cut detection of a P1 mainnet incident to six minutes.</li>
+          <li>Founded the Midnight Discord community, now roughly <strong>50,000 members</strong>, and created the Contributor Hub, a GitHub-based bounty program with 50+ bounties published.</li>
+          <li>Own the operator-facing surface: runbook library, operator guides and the compatibility matrix the fleet versions against (code owner for both), 100+ operator communications, the validator community calls, operator onboarding, and the monthly SLA review that gates vendor payments. Serve on the Midnight Technical Authority.</li>
+        </ul>
+      </li>
+
+      <li class="rv">
+        <div class="job__org">
+          <h3>Input Output (IOHK)</h3>
+          <span class="job__when">May 2021 - Jul 2025 · Remote</span>
+        </div>
+        <p class="job__title">Developer Relations Engineer (2024-2025) · Developer Relations Specialist (2021-2024)</p>
+        <ul class="job__pts">
+          <li>Owned the validator ecosystem for Midnight's public testnet, transitioning it into a co-maintained network of roughly <strong>200 validators</strong> and driving their feedback into shipped product - the work that led directly into running the federated mainnet operator set.</li>
+          <li>Detected several P1 network incidents including an unplanned hard-fork event, and identified an accidental genesis-parameter mismatch that triggered a coordinated emergency release.</li>
+          <li>Onboarded a private alpha cohort of roughly <strong>700 developers</strong>, managing API access programmatically and driving 100+ feedback issues into product and engineering.</li>
+          <li>Ran developer relations for the Cardano EVM sidechain research project that became Midnight, a Substrate-based Cardano partner chain. Championed IOHK's Ethereum Classic core development team.</li>
+        </ul>
+      </li>
+
+      <li class="rv">
+        <div class="job__org">
+          <h3>ETC Cooperative</h3>
+          <span class="job__when">Sep 2020 - May 2021</span>
+        </div>
+        <p class="job__title">Director of Developer Relations</p>
+        <p class="job__scope">Owned developer relations for the Ethereum Classic ecosystem: documentation, community, and coordination of network changes and client releases.</p>
+      </li>
+
+      <li class="rv">
+        <div class="job__org">
+          <h3>Ethereum Classic Labs</h3>
+          <span class="job__when">Dec 2018 - Aug 2020</span>
+        </div>
+        <p class="job__title">Technical Coordinator &amp; Full-Stack Technical Writer</p>
+        <ul class="job__pts">
+          <li>Coordinated <strong>four network hard forks across 200+ ecosystem stakeholders</strong>, including institutional exchanges, wallet providers and validators.</li>
+          <li>Crisis-managed three P1 network attacks, <strong>recovering the network from a proof-of-work 51% attack within 24 hours</strong> through direct ecosystem coordination.</li>
+          <li>Drove adoption of the primary core client to majority network share within a year. Launched ETC Signal, the ecosystem newsletter, at a ~51% open rate.</li>
+          <li>Ran the hackathon program owning judging and budget; mentored 12 accelerator startups and spoke across the US, Canada and Asia.</li>
+        </ul>
+      </li>
+
+      <li class="rv">
+        <div class="job__org">
+          <h3>ETCDEV</h3>
+          <span class="job__when">May 2018 - Nov 2018</span>
+        </div>
+        <p class="job__title">Technical Writer</p>
+        <p class="job__scope">Sole developer-facing function with no marketing team: owned documentation, wrote demos and articles, supported the community, and coordinated hard-fork and SDK/API releases.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="sec sec--alt" id="skills">
+  <div class="wrap">
+    <header class="sec__head rv">
+      <span class="sec__num">07 / Toolkit</span>
+      <h2>Skills &amp; standards work</h2>
+    </header>
+
+    <div class="cols">
+      <div class="panel rv">
+        <h3>Technical</h3>
+        <dl class="deflist">
+          <div>
+            <dt>Protocol &amp; blockchain</dt>
+            <dd>Midnight · Cardano (cardano-node, cardano-db-sync, Mithril) · Ethereum Classic · Substrate · partner-chain architecture · validator and staking operations · consensus and finality (GRANDPA)</dd>
+          </div>
+          <div>
+            <dt>Infrastructure as code</dt>
+            <dd>OpenTofu / Terraform · GCP (Compute Engine, Cloud SQL, Secret Manager, Cloud KMS, Cloud Storage/CDN, IAP) · Docker &amp; Compose · systemd · WireGuard · Linux · PostgreSQL</dd>
+          </div>
+          <div>
+            <dt>Reliability &amp; observability</dt>
+            <dd>Incident command · on-call response · root-cause analysis and post-mortems · runbooks · SLA and vendor management · change management · Grafana · Prometheus · Substrate telemetry</dd>
+          </div>
+          <div>
+            <dt>Languages &amp; AI</dt>
+            <dd>TypeScript · Python · Bash · SQL · Rust (read at source level, not authored) · agentic workflow design · self-hosted LLM (Ollama) · output guardrails · human-review-gated automation</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="panel rv">
+        <h3>Ecosystem &amp; standards</h3>
+        <dl class="deflist">
+          <div>
+            <dt>Developer &amp; operator relations</dt>
+            <dd>Technical writing · developer and operator documentation · developer advocacy · onboarding and enablement · community calls · public speaking · technical content</dd>
+          </div>
+          <div>
+            <dt>Standards &amp; governance</dt>
+            <dd><strong>Midnight Improvement Proposal (MIP) Editor</strong>, Jul 2025 - present · <strong>Ethereum Classic Improvement Proposal (ECIP) Editor</strong>, 2017 - 2021: editor for the ECIP standards process, hard-fork coordinator, client developer and miner · Midnight Technical Authority</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd><strong>The Illinois Institute of Art, Schaumburg</strong> - BFA, Web Design and Interactive Media (2013-2016)<br><strong>DeVry University, Illinois</strong> - Associate's, Web Graphic Design (2011-2013)</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p class="foot__lede">
+      Open to developer relations and advocacy, protocol operations, node infrastructure and SRE, and
+      solutions or forward-deployed engineering. Based in Garner, NC (Raleigh-Durham) - remote or
+      hybrid.
+    </p>
+    <div class="foot__links">
+      <a class="btn btn--primary" href="mailto:stevan.lohja.esquire546@passmail.net">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+ Email
+      </a>
+      <a class="btn" href="https://linkedin.com/in/stevanlohja" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/stevanlohja" rel="noopener">GitHub</a>
+      <a class="btn" href="https://t.me/stevanlohja" rel="noopener">Telegram</a>
+      <a class="btn" href="assets/Stevan-Lohja-Resume.pdf">Résumé (PDF)</a>
+    </div>
+
+    <div class="foot__base">
+      <span>© <span id="yr">2026</span> Stevan Lohja</span>
+      <span>Built as static HTML, CSS and JavaScript. No framework, no tracking, no cookies.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Stevan Lohja",
+ "url": "https://stevanlohja.com/",
+ "image": "https://stevanlohja.com/assets/stevan-lohja.jpg",
+ "jobTitle": "Developer Relations / Protocol Operations / Solutions Engineering",
+ "email": "mailto:stevan.lohja.esquire546@passmail.net",
+ "address": { "@type": "PostalAddress", "addressLocality": "Garner", "addressRegion": "NC", "addressCountry": "US" },
+ "sameAs": ["https://linkedin.com/in/stevanlohja", "https://github.com/stevanlohja", "https://t.me/stevanlohja"],
+ "knowsAbout": ["Developer relations", "Developer advocacy", "Technical writing", "Community building", "Protocol operations", "Node infrastructure", "Site reliability engineering", "Solutions engineering", "OpenTofu", "Terraform", "WireGuard", "Substrate", "Cardano", "Developer relations", "Agentic AI workflows"],
+ "alumniOf": [
+ { "@type": "CollegeOrUniversity", "name": "The Illinois Institute of Art, Schaumburg" },
+ { "@type": "CollegeOrUniversity", "name": "DeVry University" }
+ ]
+}
+</script>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
