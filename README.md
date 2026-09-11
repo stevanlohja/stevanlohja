@@ -1,4 +1,6 @@
-# stevanlohja.com
+# stevanlohja
+
+Live at <https://stevanlohja.github.io/stevanlohja/>.
 
 Personal portfolio site. Static HTML, CSS and JavaScript. No framework, no build step, no
 dependencies to install, no tracking.
@@ -67,7 +69,7 @@ Two details worth preserving:
   no `order` hack, and keeps screen-reader order sensible.
 
 To swap the photo, replace the file and keep the name — nothing else needs to change. The
-`og:image` URLs are absolute and assume the site is served from `https://stevanlohja.com/`.
+`og:image` URLs are absolute and point at `https://stevanlohja.github.io/stevanlohja/`.
 
 ## Content sources
 
