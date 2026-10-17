@@ -9,8 +9,6 @@ tags: devrel, community, strategy, retention
 
 **Author:** Stevan Lohja, Developer Relations Leader and founder of a ~50k-member community.
 
-**Disclosure.** The author works in developer relations and has an interest in the conclusion. To offset that, correlational evidence is labeled as such, the financial model states every assumption, and the recommendation is a staged test with a stop rule. Model reviewed by: [ADD: name and role of an independent finance or data-science reviewer].
-
 ---
 
 ## Who this paper is about

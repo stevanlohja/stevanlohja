@@ -527,6 +527,57 @@ function readPosts() {
   return posts;
 }
 
+/* ---------------- home page: latest post ---------------- */
+
+const HOME = join(ROOT, 'index.html');
+const LATEST_START = '<!-- LATEST-POST:START -->';
+const LATEST_END = '<!-- LATEST-POST:END -->';
+
+/* The card the home page shows for the newest post. Link targets are relative
+   to the site root, so they are prefixed with blog/. Deliberately not given the
+   .rv reveal class: this content is generated, and it should be visible even
+   with JavaScript disabled. */
+function latestPostBlock(post) {
+  if (!post) {
+    return '\n    <div class="note">\n      <p>No articles published yet. New writing will appear here once it is built.</p>\n    </div>\n  ';
+  }
+  const tags = post.tags.length
+    ? `\n        <ul class="stack">${post.tags.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}</ul>`
+    : '';
+  return `
+    <div class="jgrid">
+      <article class="jcard jcard--wide">
+        <div class="jcard__head">
+          <h3><a href="blog/${post.slug}.html">${escapeHtml(post.title)}</a></h3>
+          <span class="jcard__state"><time datetime="${post.date}">${fmtDate(post.date)}</time></span>
+        </div>
+        <p>${escapeHtml(post.summary)}</p>${tags}
+        <div class="jcard__links">
+          <a class="tinybtn" href="blog/${post.slug}.html">Read article &#8594;</a>
+          <a class="tinybtn" href="blog/">All articles</a>
+        </div>
+      </article>
+    </div>
+  `;
+}
+
+/* Splice the newest post into index.html between the LATEST-POST markers.
+   Only the text between the markers is replaced; the hand-written page around
+   it is never touched. Returns false (and does nothing) if index.html or the
+   markers are missing, so a hand-authored home page is safe by default. */
+function injectLatestPost(posts) {
+  if (!existsSync(HOME)) return false;
+  const html = readFileSync(HOME, 'utf8');
+  const s = html.indexOf(LATEST_START);
+  const e = html.indexOf(LATEST_END);
+  if (s === -1 || e === -1 || e < s) return false;
+
+  const block = latestPostBlock(posts[0] || null);
+  const next = html.slice(0, s + LATEST_START.length) + block + html.slice(e);
+  writeFileSync(HOME, next);
+  return true;
+}
+
 function main() {
   // refuse to clobber a hand-written blog/index.html (ours always carries the marker)
   const indexPath = join(BLOG, 'index.html');
@@ -581,6 +632,15 @@ function main() {
   // rss
   writeFileSync(join(BLOG, 'feed.xml'), rssXml(posts));
   console.log('wrote blog/feed.xml');
+
+  // home page: splice the newest post into the LATEST-POST block (marker-guarded)
+  if (injectLatestPost(posts)) {
+    console.log(posts.length
+      ? `updated index.html latest-post block (newest: ${posts[0].slug})`
+      : 'updated index.html latest-post block (no published posts)');
+  } else {
+    console.log('index.html latest-post block skipped (file or markers not found)');
+  }
 
   // remove generated pages whose .md source is gone (marker-guarded, never touches foreign files)
   for (const f of readdirSync(BLOG)) {
