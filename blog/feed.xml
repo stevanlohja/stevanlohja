@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stevan Lohja - Blog</title>
+    <link>https://stevanlohja.github.io/stevanlohja/blog/</link>
+    <description>Notes on developer relations, protocol operations, node infrastructure and the tooling in between.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Oct 2026 00:11:18 GMT</lastBuildDate>
+    <atom:link href="https://stevanlohja.github.io/stevanlohja/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Loyalty Deficit: Is Developer Community a Retention Moat in the AI Race?</title>
+      <link>https://stevanlohja.github.io/stevanlohja/blog/2026-10-16-the-loyalty-deficit.html</link>
+      <guid isPermaLink="true">https://stevanlohja.github.io/stevanlohja/blog/2026-10-16-the-loyalty-deficit.html</guid>
+      <pubDate>Fri, 16 Oct 2026 12:00:00 GMT</pubDate>
+      <description>A testable case that developer community is a retention moat in the AI race - what lift it needs per percent of ARR spent, a CFO-ready scorecard, and a decision gate with a stop rule.</description>
+    </item>
+  </channel>
+</rss>

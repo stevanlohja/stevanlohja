@@ -2,8 +2,10 @@
 
 Live at <https://stevanlohja.github.io/stevanlohja/>.
 
-Personal portfolio site. Static HTML, CSS and JavaScript. No framework, no build step, no
-dependencies to install, no tracking.
+Personal portfolio site. Static HTML, CSS and JavaScript. No framework, no
+dependencies to install, no tracking. The one exception is the blog: articles are
+Markdown files compiled to static HTML by a small dependency-free Node script
+(`scripts/build-blog.mjs`).
 
 Seven sections, ordered so the site serves a developer-relations reader and an
 infrastructure/SRE reader equally:
@@ -21,8 +23,16 @@ infrastructure/SRE reader equally:
 ```
 .
 ├── index.html      single page, all content
-├── css/styles.css  design tokens + layout (light and dark)
+├── css/styles.css  design tokens + layout (light and dark, grayscale)
 ├── js/main.js      progressive enhancement only
+├── blog/           articles as Markdown + generated pages (see below)
+│   ├── *.md              SOURCE - one file per article
+│   ├── index.html        GENERATED - listing page
+│   ├── <slug>.html       GENERATED - one page per article
+│   └── feed.xml          GENERATED - RSS feed
+├── scripts/
+│   ├── build-blog.mjs    blog builder (Node, zero dependencies)
+│   └── new-post.mjs      scaffolds a new article
 ├── assets/
 │   ├── Stevan-Lohja-Resume.pdf
 │   └── stevan-lohja.jpg    portrait, 399x399, 24 KB
@@ -37,6 +47,56 @@ Open `index.html` directly, or serve it:
 ```bash
 python3 -m http.server 8000    # then http://localhost:8000
 ```
+
+## The blog
+
+Articles live in `blog/` as Markdown files with a front matter block:
+
+```markdown
+---
+title: Deterministic alerting, not anomaly detection
+date: 2026-10-13
+summary: One sentence shown on the index card and in link previews.
+tags: sre, alerting, operations
+draft: false
+---
+
+Body text. **Bold**, *italic*, `code`, [links](https://example.com),
+> blockquotes, - lists, 1. numbered lists, --- rules, tables, and fenced code
+blocks with ``` fences all work. Filenames are dated `YYYY-MM-DD-slug.md` and
+the whole filename becomes the URL slug, so `blog/2026-10-13-my-post.md`
+publishes at `blog/2026-10-13-my-post.html`.
+```
+
+`draft: true` keeps a post off the site (no page, no index card, no RSS item)
+without deleting it. `title` and `date` are required; `summary` and `tags` are
+optional. Files starting with `_` are ignored. Keep the `date` in the filename
+identical to the `date` in the front matter - the build does not check that
+they match.
+
+### Publishing an article
+
+```bash
+node scripts/new-post.mjs "Post title"   # scaffolds blog/YYYY-MM-DD-post-title.md as a draft
+# edit the file, then set draft: false
+node scripts/build-blog.mjs              # regenerates the pages + index + feed
+git add blog/ && git commit && git push  # generated files are committed too
+```
+
+The build refuses to run if a post is missing `title`/`date`, uses a bad
+filename, or if someone hand-wrote a `blog/index.html` it would clobber.
+Deleting a `.md` file and rebuilding removes its generated page. **Never edit
+the generated `blog/*.html` / `feed.xml` by hand** - they carry a marker comment
+and are overwritten on the next build.
+
+Generated article pages reuse the site's nav, footer, theme toggle and design
+tokens, plus long-form prose styles (`.prose`) in `css/styles.css`. Each page
+ships canonical/og/twitter meta tags, `BlogPosting` JSON-LD, and an RSS feed at
+`blog/feed.xml` (linked from every page via `<link rel="alternate">`). The blog
+index and article pages work with JavaScript disabled; `js/main.js` loads
+unchanged and its scroll-spy safely ignores the `../#section` links.
+
+The naming rule below applies to blog articles like everything else on the site.
 
 ## Deploy to GitHub Pages
 
